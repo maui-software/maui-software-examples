@@ -1,0 +1,29 @@
+formats:
+  - format_name: "WOONDUM_FILE_FORMAT"
+    file_name_format: dateTimezone_site_id
+    file_extension: wav
+    metadata_tag_info:
+      
+      
+      date:
+        description: Date in which the record started.
+        type: Date
+        format: '(\d{8})'
+        date_format: 'YYYYMMDD'
+      time:
+        description: Time of the day in which the record started.
+        type: Time
+        format: '(\d{6})'
+        time_format: 'hhmmss'
+      zone:
+        description: Time of the day in which the record started.
+        type: Time
+        format: '(\+\d{4})'
+      site: 
+        description: Determine which site the recording equipment is placed in a given date and time. The mapping of each landscape and its position is done in another file.
+        type: String
+        format: '(\w+-\w+)'
+      id:
+        description: Recording ID.
+        type: Integer
+        format: '(\d+)'
